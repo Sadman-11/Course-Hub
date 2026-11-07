@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Course Materials</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body class="admin">
+  <div class="shell">
+    <aside class="side">
+      <a class="wordmark" href="/"><b>Course Materials</b><span>Dashboard</span></a>
+      <nav aria-label="Dashboard">
+        <a href="#/overview" data-view="overview">Overview</a>
+        <a href="#/sync" data-view="sync">Sync</a>
+        <a href="#/files" data-view="files">Files</a>
+        <a href="#/classroom" data-view="classroom">Classroom <span id="inbox-badge"></span></a>
+        <a href="#/settings" data-view="settings">Settings</a>
+      </nav>
+      <div class="who"><span id="who"></span><br><button class="theme-toggle" id="theme" type="button" aria-label="Toggle theme"></button></div>
+    </aside>
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+</body>
+</html>

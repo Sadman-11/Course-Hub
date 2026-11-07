@@ -1,0 +1,21 @@
+{
+  "name": "course-hub",
+  "private": true,
+  "type": "module",
+  "description": "Course Materials: Drive ⇄ GitHub sync, Classroom import, public library site and admin dashboard.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --test --test-concurrency=1 \"sync/test/*.test.js\"",
+    "db:migrate:local": "wrangler d1 migrations apply course-hub --local",
+    "db:migrate": "wrangler d1 migrations apply course-hub --remote",
+    "plan": "node tools/reorg-plan.mjs",
+    "sync:dry": "node sync/index.js --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

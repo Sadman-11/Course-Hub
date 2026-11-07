@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  html, body { margin: 0; }
+  body { width: 1600px; height: 980px; background: #e9e3d6; position: relative; overflow: hidden; font-family: 'IBM Plex Mono', monospace; }
+  body::before { content: ''; position: absolute; inset: 0; background:
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(28,27,24,.045) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(28,27,24,.045) 39px 40px); }
+  .browser { position: absolute; left: 70px; top: 70px; width: 1180px; border-radius: 10px; overflow: hidden;
+    background: #f5f2ea; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 30px 60px -20px rgba(28,27,24,.35), 0 0 0 1px rgba(28,27,24,.18); }
+  .bar { height: 44px; background: #1c1b18; display: flex; align-items: center; gap: 8px; padding: 0 16px; }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #4a4740; display: block; }
+  .bar i:first-child { background: #b3361b; }
+  .url { margin-left: 18px; background: #2b2925; color: #bdb6a7; font-size: 13px; padding: 6px 14px; border-radius: 6px; letter-spacing: .02em; }
+  .url b { color: #ece7dc; font-weight: 500; }
+  .browser img { display: block; width: 100%; }
+  .phone { position: absolute; right: 80px; top: 150px; width: 330px; padding: 12px; background: #1c1b18; border-radius: 46px;
+    box-shadow: 0 40px 70px -24px rgba(28,27,24,.55), 0 0 0 1px rgba(255,255,255,.06) inset; }
+  .phone .screen { border-radius: 35px; overflow: hidden; height: 690px; background: #f5f2ea; position: relative; }
+  .phone .screen::before { content: ''; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 92px; height: 24px; background: #1c1b18; border-radius: 14px; z-index: 2; }
+  .phone img { display: block; width: 100%; margin-top: 30px; }
+  .tag { position: absolute; left: 70px; bottom: 34px; font-size: 13px; color: #6b665c; letter-spacing: .08em; text-transform: uppercase; }
+  .tag b { color: #b3361b; font-weight: 500; }
+</style></head>
+<body>
+  <div class="browser"><div class="bar"><i></i><i></i><i></i><span class="url">https://<b>course-hub.sadmananik.workers.dev</b>/</span></div><img src="site-home.png" alt=""></div>
+  <div class="phone"><div class="screen"><img src="mobile-course.png" alt=""></div></div>
+  <div class="tag"><b>■</b> Course Materials · Drive ⇄ GitHub ⇄ Web · Classroom import</div>
+</body></html>

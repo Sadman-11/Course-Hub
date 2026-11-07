@@ -1,0 +1,75 @@
+# Drive ⇄ GitHub sync for the course library.
+# Installed in Sadman-11/Course-Materials. The engine lives in Sadman-11/Course-Hub.
+#
+# Triggers
+#   - workflow_dispatch: the dashboard's "Sync now" / "Dry run" / "Approve", and the
+#     Worker's 30-minute cron (scheduled workflows get paused after 60 idle days;
+#     dispatches don't).
+#   - push to main: someone committed files directly to GitHub → copy them to Drive.
+#     Commits made by this workflow use GITHUB_TOKEN and never re-trigger it.
+#   - schedule: backup heartbeat in case the Worker is down.
+name: Sync Drive ⇄ GitHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Plan only, change nothing
+        type: boolean
+        default: false
+      approve:
+        description: Plan hash to approve a blocked run with many deletions
+        type: string
+        default: ''
+      trigger:
+        description: Who asked (shown in the dashboard)
+        type: string
+        default: manual
+  push:
+    branches: [main]
+    paths-ignore: ['.sync/**', '.github/**']
+  schedule:
+    - cron: '23 */6 * * *'
+
+concurrency:
+  group: course-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out sync engine
+        uses: actions/checkout@v4
+        with:
+          repository: Sadman-11/Course-Hub
+          path: engine
+          sparse-checkout: |
+            sync
+            shared
+            package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sync
+        env:
+          DRIVE_ROOT_ID: ${{ vars.DRIVE_ROOT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SYNC_API: ${{ vars.SYNC_API }}
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          SYNC_TRIGGER: ${{ inputs.trigger || github.event_name }}
+          SYNC_DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          APPROVE: ${{ inputs.approve }}
+        run: |
+          git config --global init.defaultBranch main
+          if [ -n "$APPROVE" ]; then
+            node engine/sync/index.js --approve="$APPROVE"
+          else
+            node engine/sync/index.js
+          fi

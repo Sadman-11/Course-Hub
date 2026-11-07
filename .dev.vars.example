@@ -1,0 +1,6 @@
+ADMIN_EMAILS="you@example.com"
+GOOGLE_CLIENT_SECRET=""
+SESSION_SECRET=""
+TOKEN_KEY=""
+SYNC_TOKEN=""
+# GITHUB_TOKEN=""   # optional locally; anonymous raw downloads work for the public repo

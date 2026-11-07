@@ -1,0 +1,4 @@
+# Store and check out every file byte-for-byte, exactly as it is on Google Drive.
+# Without this, Git converts CRLF line endings, so the GitHub copy of a .java/.c/.cir
+# file would never match the Drive copy and every sync would rewrite it.
+* -text

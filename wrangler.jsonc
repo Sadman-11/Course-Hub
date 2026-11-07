@@ -1,0 +1,42 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "course-hub",
+  "main": "worker/src/index.js",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Static site + dashboard. The Worker runs first so it can add security
+  // headers, link-preview tags and the admin gate.
+  "assets": {
+    "directory": "./web",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+
+  "build": { "command": "node scripts/build.mjs", "watch_dir": ["worker/src", "shared"] },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "course-hub",
+      "database_id": "8acef2cd-09a6-40f1-926b-cc9da1493eff",
+      "migrations_dir": "worker/migrations"
+    }
+  ],
+
+  // Keeps the sync running: dispatches the GitHub Actions workflow every 30 min.
+  "triggers": { "crons": ["*/30 * * * *"] },
+
+  "observability": { "enabled": true },
+
+  // Non-secret settings. Secrets (set with `wrangler secret put`, never committed):
+  //   ADMIN_EMAILS (comma-separated), GOOGLE_CLIENT_SECRET, SESSION_SECRET, TOKEN_KEY, SYNC_TOKEN, GITHUB_TOKEN
+  "vars": {
+    "SITE_NAME": "Course Materials",
+    "PUBLIC_URL": "https://course-hub.sadmananik.workers.dev",
+    "GOOGLE_CLIENT_ID": "REPLACE.apps.googleusercontent.com",
+    "DRIVE_ROOT_ID": "1jTPTsKcrJIgU9ciUM1sSpYe0qig2MvZW",
+    "GITHUB_REPO": "Sadman-11/Course-Materials",
+    "GITHUB_WORKFLOW": "sync.yml"
+  }
+}

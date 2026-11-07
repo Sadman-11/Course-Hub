@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.sync-token
+web/js/taxonomy.js
+*.log
+reorg/applied-*.json

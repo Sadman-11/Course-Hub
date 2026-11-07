@@ -1,0 +1,30 @@
+# Paths listed here stay on Google Drive only and are never published to GitHub.
+# Same syntax as .gitignore. Files over 100 MiB are always Drive-only (GitHub's limit).
+#
+# Adding a pattern removes matching files from the GitHub tree on the next sync
+# (they remain in earlier Git history). Removing a pattern publishes them again.
+
+# Textbooks: Drive only (publisher-copyrighted; keeps them out of the public repo).
+*/*/Books/**
+
+# The same books at their pre-reorganisation paths. Safe to delete this block
+# once the reorganisation has run.
+CSE103/RIFAT/Books/Teach Yourself C - Herbert Schildt.pdf
+CSE103/RIFAT/Books/ansi-c-balaguruswamy.pdf
+CSE106/SDNA/discretemathematics-text-book.pdf
+CSE110/DSU/Introduction_to_Java_programming_TextBook - Liang.pdf
+CSE110/DSU/Java - How to Program 10th Ed - Early Objects Version - Deitel.pdf
+CSE207/MMLI/Books & References/1.-DSA-a-psuedocode-approach-with-C-by-Forouzan.pdf
+CSE207/MMLI/Books & References/Data Structures With C - by schaum lipschutz.pdf
+CSE251/RDA/Spring-26/Books/Boylestad, Robert_ Nashelsky, Louis - Electronic devices and circuit theory (2014, Pearson) - libgen.li.pdf
+CSE251/RDA/Spring-26/Books/Robert L. Boylestad, Louis Nashelsky - Electronic Devices and Circuit Theory (11th Edition) (2012, Prentice Hall) - libgen.li.pdf
+CSE251/RDA/Spring-26/Books/Sedra Smith - Microelectronic Circuits 2015 - libgen.li.pdf
+CSE251/SJ/Study Materials/Electronic Devices and Circuit Theory.pdf
+CSE251/SJ/Study Materials/Microelectronic Circuits by Sedra Smith.pdf
+CSE251/SJA/Book-Electronic Devices and Circuit Theory 11th Ed - Boylestad.pdf
+ECO7101/NTM/Principle of Economics Michael Parkin.pdf
+MAT101/DMAHS/Howard Anton(10th Edition).pdf
+MAT102/TD/A First Course in Differential Equations with Modeling Applications 10e 2012 Zill.pdf
+MAT102/TD/ORDINARY_AND_PARTIAL_DIFFERENTIAL_EQUATI.pdf
+PHY109/AROY/Fall-25/fundamentals-of-physics-textbook.pdf
+PHY109/AROY/Lab_Manuals/Manuals_Printable/Principle of Economics Michael Parkin.pdf
