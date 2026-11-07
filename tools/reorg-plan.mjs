@@ -45,15 +45,15 @@ const entries = files.map((f) => {
     }
   }
   const c = canonicalPath(source, { size: f.size });
-  return { from: f.path, to: c.path, size: f.size, ...c, reasons: [...reasons, ...c.reasons], redirected: source !== f.path };
+  return { from: f.path, to: c.path, size: f.size, md5: f.md5 || null, ...c, reasons: [...reasons, ...c.reasons], redirected: source !== f.path };
 });
 
-// --- duplicates: same course + instructor + tidy name + size ---------------
+// --- duplicates: same course + instructor + tidy name + size (+ md5 when known)
 const groups = new Map();
 for (const e of entries) {
   // "CSE207 MID Practice.pdf" and "CSE207_MID_Practice.pdf" at the same size are one file.
-  // (md5 is re-checked before anything is trashed.)
-  const key = [e.course, e.instructor, e.to.split('/').pop().toLowerCase().replace(/[\s_-]+/g, ' '), e.size].join('|');
+  // With a live Drive listing the md5 must match too; without one it's re-checked at apply time.
+  const key = [e.course, e.instructor, e.to.split('/').pop().toLowerCase().replace(/[\s_-]+/g, ' '), e.size, e.md5 || ''].join('|');
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(e);
 }
@@ -70,7 +70,7 @@ for (const g of groups.values()) {
   for (const d of g.slice(1)) {
     d.action = 'trash';
     d.duplicateOf = keep.to;
-    d.reasons.push(`identical name+size to ${keep.from} (md5 re-checked before trashing)`);
+    d.reasons.push(d.md5 ? `byte-identical (md5) to ${keep.from}` : `identical name+size to ${keep.from} (md5 re-checked before trashing)`);
   }
 }
 

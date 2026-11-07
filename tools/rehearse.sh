@@ -21,7 +21,8 @@ import fs from "fs"; import path from "path"; import { pathToFileURL } from "url
 const [proj, manifest, ...roots] = process.argv.slice(1);
 const { cleanName } = await import(pathToFileURL(path.join(proj, "shared/taxonomy.js")).href);
 for (const f of JSON.parse(fs.readFileSync(manifest, "utf8")).filter((f) => f.type === "file")) {
-  const body = `${cleanName(path.basename(f.path)).toLowerCase().replace(/[\s_-]+/g, " ")}|${f.size}`;
+  // With a live listing the real md5 is the content, so duplicates match exactly as on Drive.
+  const body = f.md5 || `${cleanName(path.basename(f.path)).toLowerCase().replace(/[\s_-]+/g, " ")}|${f.size}`;
   const big = f.size > 100 * 1024 * 1024;
   for (const [i, r] of roots.entries()) {
     if (big && i === 1) continue; // over GitHub limit: Drive only

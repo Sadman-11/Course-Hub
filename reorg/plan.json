@@ -787,7 +787,7 @@
   "reasons": [
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to CSE106/MAHCY/Counting-1.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE106/MAHCY/Counting-1.pdf"
   ]
  },
  {
@@ -918,7 +918,7 @@
   "reasons": [
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to CSE106/MAHCY/Permutations and Combinations.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE106/MAHCY/Permutations and Combinations.pdf"
   ]
  },
  {
@@ -2607,11 +2607,21 @@
  },
  {
   "action": "move",
+  "from": "CSE207/MI/Summer-26/Questions/All_Questions.zip",
+  "to": "CSE207/MI/Questions/Summer-26/All_Questions.zip",
+  "size": 3735764,
+  "reasons": []
+ },
+ {
+  "action": "trash",
   "from": "CSE207/MI/Summer-26/Questions/CSE207 MID Ptactice Questions.pdf",
-  "to": "CSE207/MI/Questions/Summer-26/CSE207 MID Practice Questions.pdf",
+  "to": null,
   "size": 196139,
+  "duplicateOf": "CSE207/MI/Questions/Summer-26/CSE207_MID_Practice Questions.pdf",
+  "fallbackTo": "CSE207/MI/Questions/Summer-26/CSE207 MID Practice Questions.pdf",
   "reasons": [
-   "name tidied"
+   "name tidied",
+   "byte-identical (md5) to CSE207/MI/Summer-26/Questions/CSE207_MID_Ptactice Questions.pdf"
   ]
  },
  {
@@ -2629,15 +2639,12 @@
   "reasons": []
  },
  {
-  "action": "trash",
+  "action": "move",
   "from": "CSE207/MI/Summer-26/Questions/CSE207_MID_Ptactice Questions.pdf",
-  "to": null,
+  "to": "CSE207/MI/Questions/Summer-26/CSE207_MID_Practice Questions.pdf",
   "size": 196139,
-  "duplicateOf": "CSE207/MI/Questions/Summer-26/CSE207 MID Practice Questions.pdf",
-  "fallbackTo": "CSE207/MI/Questions/Summer-26/CSE207_MID_Practice Questions.pdf",
   "reasons": [
-   "name tidied",
-   "identical name+size to CSE207/MI/Summer-26/Questions/CSE207 MID Ptactice Questions.pdf (md5 re-checked before trashing)"
+   "name tidied"
   ]
  },
  {
@@ -2652,6 +2659,13 @@
   "from": "CSE207/MI/Summer-26/Questions/CSE207_Practice_Summer_26.pdf",
   "to": "CSE207/MI/Questions/Summer-26/CSE207_Practice_Summer_26.pdf",
   "size": 185608,
+  "reasons": []
+ },
+ {
+  "action": "move",
+  "from": "CSE207/MI/Summer-26/Questions/Final_Practice_Solutions.zip",
+  "to": "CSE207/MI/Questions/Summer-26/Final_Practice_Solutions.zip",
+  "size": 134252,
   "reasons": []
  },
  {
@@ -3108,7 +3122,7 @@
   "duplicateOf": "CSE207/MMLI/Projects/CSE207_project_list-merged.pdf",
   "fallbackTo": "CSE207/MMLI/Labs/CSE207_project_list-merged.pdf",
   "reasons": [
-   "identical name+size to CSE207/MMLI/LAB & Projects/Project/CSE207_project_list-merged.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE207/MMLI/LAB & Projects/Project/CSE207_project_list-merged.pdf"
   ]
  },
  {
@@ -3141,7 +3155,7 @@
   "fallbackTo": "CSE207/MMLI/Labs/Lecture_8_stack_Implementation.pdf",
   "reasons": [
    "name tidied",
-   "identical name+size to CSE207/MMLI/Lecture slides/Mid (slide 6 to end)/Lecture_8_stack_Implementation(1).ppt.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE207/MMLI/Lecture slides/Mid (slide 6 to end)/Lecture_8_stack_Implementation(1).ppt.pdf"
   ]
  },
  {
@@ -4180,7 +4194,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/CSE251 Lab Manuals - All.pdf",
   "fallbackTo": "CSE251/RDA/Labs/CSE251 Lab Manuals - All.pdf",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/CSE251 Lab Manuals - All.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/CSE251 Lab Manuals - All.pdf"
   ]
  },
  {
@@ -4226,7 +4240,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Expt 5.doc",
   "fallbackTo": "CSE251/RDA/Labs/Expt 5.doc",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 5.doc (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 5.doc"
   ]
  },
  {
@@ -4237,7 +4251,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Expt 6.doc",
   "fallbackTo": "CSE251/RDA/Labs/Expt 6.doc",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 6.doc (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 6.doc"
   ]
  },
  {
@@ -4248,7 +4262,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Expt 7.doc",
   "fallbackTo": "CSE251/RDA/Labs/Expt 7.doc",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 7.doc (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 7.doc"
   ]
  },
  {
@@ -4259,7 +4273,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Expt 8.doc",
   "fallbackTo": "CSE251/RDA/Labs/Expt 8.doc",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 8.doc (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Expt 8.doc"
   ]
  },
  {
@@ -4270,7 +4284,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Lab rules.doc",
   "fallbackTo": "CSE251/RDA/Labs/Lab rules.doc",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Lab rules.doc (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Lab rules.doc"
   ]
  },
  {
@@ -4281,7 +4295,7 @@
   "duplicateOf": "CSE251/RDA/Labs/Spring-26/Lab3clipperclamper.pdf",
   "fallbackTo": "CSE251/RDA/Labs/Lab3clipperclamper.pdf",
   "reasons": [
-   "identical name+size to CSE251/RDA/Spring-26/CSE251 Lab Manual/Lab3clipperclamper.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to CSE251/RDA/Spring-26/CSE251 Lab Manual/Lab3clipperclamper.pdf"
   ]
  },
  {
@@ -6896,7 +6910,7 @@
   "reasons": [
    "MAT104 cover page inside MAT205",
    "category from filename → Assignments",
-   "identical name+size to MAT104/DMY/CoverPage_Mat104_Assignment.docx (md5 re-checked before trashing)"
+   "byte-identical (md5) to MAT104/DMY/CoverPage_Mat104_Assignment.docx"
   ]
  },
  {
@@ -6950,7 +6964,7 @@
   "fallbackTo": "MAT205/ALAM/Lectures/Final/Handouts-3_ Contour Integration.pdf",
   "reasons": [
    "name tidied",
-   "identical name+size to MAT205/ALAM/Lecture Slides/Final/Handouts-3_ Contour Integration.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to MAT205/ALAM/Lecture Slides/Final/Handouts-3_ Contour Integration.pdf"
   ]
  },
  {
@@ -7092,21 +7106,21 @@
  {
   "action": "move",
   "from": "PHY109/AROY/Fall-25/Fluid_Mechanics.pdf",
-  "to": "PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics [Fall-25].pdf",
+  "to": "PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics.pdf",
   "size": 315887,
   "reasons": [
-   "category from filename → Lectures",
-   "name clash at PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics.pdf, tagged with origin folder"
+   "category from filename → Lectures"
   ]
  },
  {
   "action": "move",
   "from": "PHY109/AROY/Fall-25/Fluid_Mechanics(2).pdf",
-  "to": "PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics.pdf",
+  "to": "PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics [Fall-25].pdf",
   "size": 140991,
   "reasons": [
    "category from filename → Lectures",
-   "name tidied"
+   "name tidied",
+   "name clash at PHY109/AROY/Lectures/Fall-25/Fluid_Mechanics.pdf, tagged with origin folder"
   ]
  },
  {
@@ -7292,7 +7306,7 @@
   "reasons": [
    "Economics material inside PHY109 lab manuals",
    "category from filename → Assignments",
-   "identical name+size to ECO7101/NTM/Assignments/CoverPage_Eco7101_Assignment_01.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Assignments/CoverPage_Eco7101_Assignment_01.pdf"
   ]
  },
  {
@@ -7305,7 +7319,7 @@
   "reasons": [
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
-   "identical name+size to ECO7101/NTM/Assignments/ECO101_A01_Fall'25.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Assignments/ECO101_A01_Fall'25.pdf"
   ]
  },
  {
@@ -7319,7 +7333,7 @@
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to ECO7101/NTM/Lecture/Eco101_Ch 01_What is Economics.pptx.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Lecture/Eco101_Ch 01_What is Economics.pptx.pdf"
   ]
  },
  {
@@ -7333,7 +7347,7 @@
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to ECO7101/NTM/Lecture/Eco101_Ch 02_The Economic Problem.pptx.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Lecture/Eco101_Ch 02_The Economic Problem.pptx.pdf"
   ]
  },
  {
@@ -7347,7 +7361,7 @@
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to ECO7101/NTM/Lecture/Eco101_Ch 03_ Demand & Supply Theory.pptx.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Lecture/Eco101_Ch 03_ Demand & Supply Theory.pptx.pdf"
   ]
  },
  {
@@ -7361,7 +7375,7 @@
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to ECO7101/NTM/Lecture/Eco101_Ch 04_Elasticity.pptx.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Lecture/Eco101_Ch 04_Elasticity.pptx.pdf"
   ]
  },
  {
@@ -7375,7 +7389,7 @@
    "Economics material inside PHY109 lab manuals",
    "category from filename → Lectures",
    "name tidied",
-   "identical name+size to ECO7101/NTM/Lecture/Eco101_Consumer & Producer Surplus.pptx.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Lecture/Eco101_Consumer & Producer Surplus.pptx.pdf"
   ]
  },
  {
@@ -7388,7 +7402,7 @@
   "reasons": [
    "Economics material inside PHY109 lab manuals",
    "category from filename → Assignments",
-   "identical name+size to ECO7101/NTM/Assignments/eco7101_assignment_ans.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Assignments/eco7101_assignment_ans.pdf"
   ]
  },
  {
@@ -7443,7 +7457,7 @@
   "reasons": [
    "Economics material inside PHY109 lab manuals",
    "category from filename → Books",
-   "identical name+size to ECO7101/NTM/Principle of Economics Michael Parkin.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to ECO7101/NTM/Principle of Economics Michael Parkin.pdf"
   ]
  },
  {
@@ -7518,7 +7532,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/E_and_M_1.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/E_and_M_1.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/E_and_M_1.pdf"
   ]
  },
  {
@@ -7539,7 +7553,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/E_and_M-2.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/E_and_M-2.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/E_and_M-2.pdf"
   ]
  },
  {
@@ -7551,7 +7565,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/E_and_M-3.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/E_and_M-3.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/E_and_M-3.pdf"
   ]
  },
  {
@@ -7626,19 +7640,16 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/OPTICS-1.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/OPTICS-1.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/OPTICS-1.pdf"
   ]
  },
  {
-  "action": "trash",
+  "action": "move",
   "from": "PHY109/AROY/Summer-25/OPTICS-2.pdf",
-  "to": null,
+  "to": "PHY109/AROY/Lectures/Summer-25/OPTICS-2.pdf",
   "size": 393663,
-  "duplicateOf": "PHY109/AROY/Lectures/Fall-25/OPTICS-2.pdf",
-  "fallbackTo": "PHY109/AROY/Lectures/Summer-25/OPTICS-2.pdf",
   "reasons": [
-   "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/OPTICS-2.pdf (md5 re-checked before trashing)"
+   "category from filename → Lectures"
   ]
  },
  {
@@ -7666,7 +7677,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/Thermal_Physics_1.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/Thermal_Physics_1.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/Thermal_Physics_1.pdf"
   ]
  },
  {
@@ -7678,7 +7689,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/Thermal_Physics_2.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/Thermal_Physics_2.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/Thermal_Physics_2.pdf"
   ]
  },
  {
@@ -7690,7 +7701,7 @@
   "fallbackTo": "PHY109/AROY/Lectures/Summer-25/Waves___Oscillation-1.pdf",
   "reasons": [
    "category from filename → Lectures",
-   "identical name+size to PHY109/AROY/Fall-25/Waves___Oscillation-1.pdf (md5 re-checked before trashing)"
+   "byte-identical (md5) to PHY109/AROY/Fall-25/Waves___Oscillation-1.pdf"
   ]
  },
  {

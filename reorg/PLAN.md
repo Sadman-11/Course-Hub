@@ -1,6 +1,6 @@
 # Drive reorganisation plan
 
-Files: 996 · move/rename: 919 · already in place: 46 · trash (duplicates): 31 (63.0 MB)
+Files: 998 · move/rename: 922 · already in place: 46 · trash (duplicates): 30 (62.6 MB)
 
 Layout: `COURSE / INSTRUCTOR / Category / [Semester] / …`
 
@@ -79,7 +79,7 @@ CSE207/MI
     Lectures/Summer-26           14
     Lectures/Spring-26            2
     Labs/Summer-26                9
-    Questions/Summer-26          13
+    Questions/Summer-26          15
     Questions                     8
     Projects/Summer-26            7
 CSE207/MMLI
@@ -189,7 +189,7 @@ PHY109/AROY
     Course-Info/Fall-25           1
     Course-Info/Summer-25         1
     Lectures/Fall-25             18
-    Lectures/Summer-25           10
+    Lectures/Summer-25           11
     Labs                         19
     Assignments/Fall-25           2
     Questions/Summer-25           1
@@ -207,7 +207,7 @@ Drive keeps trashed files for 30 days. md5 is re-verified before each one is tra
 
 - `CSE106/MAHCY/Counting-1 (1).pdf` → duplicate of `CSE106/MAHCY/Lectures/Counting-1.pdf`
 - `CSE106/MAHCY/Permutations and Combinations (1).pdf` → duplicate of `CSE106/MAHCY/Lectures/Permutations and Combinations.pdf`
-- `CSE207/MI/Summer-26/Questions/CSE207_MID_Ptactice Questions.pdf` → duplicate of `CSE207/MI/Questions/Summer-26/CSE207 MID Practice Questions.pdf`
+- `CSE207/MI/Summer-26/Questions/CSE207 MID Ptactice Questions.pdf` → duplicate of `CSE207/MI/Questions/Summer-26/CSE207_MID_Practice Questions.pdf`
 - `CSE207/MMLI/LAB & Projects/Labs/CSE207_project_list-merged.pdf` → duplicate of `CSE207/MMLI/Projects/CSE207_project_list-merged.pdf`
 - `CSE207/MMLI/LAB & Projects/Labs/Lecture_8_stack_Implementation(1).ppt.pdf` → duplicate of `CSE207/MMLI/Lectures/Mid (slide 6 to end)/Lecture_8_stack_Implementation.pdf`
 - `CSE251/RDA/Lab reports/CSE251 Lab Manuals - All.pdf` → duplicate of `CSE251/RDA/Labs/Spring-26/CSE251 Lab Manuals - All.pdf`
@@ -232,7 +232,6 @@ Drive keeps trashed files for 30 days. md5 is re-verified before each one is tra
 - `PHY109/AROY/Summer-25/E_and_M-2.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/E_and_M-2.pdf`
 - `PHY109/AROY/Summer-25/E_and_M-3.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/E_and_M-3.pdf`
 - `PHY109/AROY/Summer-25/OPTICS-1.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/OPTICS-1.pdf`
-- `PHY109/AROY/Summer-25/OPTICS-2.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/OPTICS-2.pdf`
 - `PHY109/AROY/Summer-25/Thermal_Physics_1.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/Thermal_Physics_1.pdf`
 - `PHY109/AROY/Summer-25/Thermal_Physics_2.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/Thermal_Physics_2.pdf`
 - `PHY109/AROY/Summer-25/Waves___Oscillation-1.pdf` → duplicate of `PHY109/AROY/Lectures/Fall-25/Waves___Oscillation-1.pdf`
@@ -486,8 +485,8 @@ These sat directly in an instructor folder, so the category comes from the file 
 - `PHY109/AROY/…/E_and_M_1.pdf` → **Lectures**
 - `PHY109/AROY/…/E_and_M-2.pdf` → **Lectures**
 - `PHY109/AROY/…/E_and_M-3.pdf` → **Lectures**
-- `PHY109/AROY/…/Fluid_Mechanics.pdf` → **Lectures**
 - `PHY109/AROY/…/Fluid_Mechanics(2).pdf` → **Lectures**
+- `PHY109/AROY/…/Fluid_Mechanics.pdf` → **Lectures**
 - `PHY109/AROY/…/Mechanics-1_Fall-25.pdf` → **Lectures**
 - `PHY109/AROY/…/Mechanics-2.pdf` → **Lectures**
 - `PHY109/AROY/…/Mechanics-3.pdf` → **Lectures**
@@ -509,6 +508,7 @@ These sat directly in an instructor folder, so the category comes from the file 
 - `PHY109/AROY/…/Mechanics-3.pdf` → **Lectures**
 - `PHY109/AROY/…/Mechanics-4..pdf` → **Lectures**
 - `PHY109/AROY/…/Mechanics-5.pdf` → **Lectures**
+- `PHY109/AROY/…/OPTICS-2.pdf` → **Lectures**
 - `PHY109/AROY/…/Waves___Oscillation-2.pdf` → **Lectures**
 - `PHY109/AROY/…/Waves___Oscillation-3.pdf` → **Lectures**
 - `STA102/ERSHAD/…/CoverPage_STA102_Assignment_01.docx` → **Assignments**
@@ -528,10 +528,10 @@ These sat directly in an instructor folder, so the category comes from the file 
 ## Per-category totals
 
 - Course-Info: 42
-- Lectures: 312
+- Lectures: 313
 - Labs: 255
 - Assignments: 51
-- Questions: 147
+- Questions: 149
 - Practice: 33
 - Projects: 50
 - Books: 18
