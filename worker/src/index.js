@@ -54,8 +54,13 @@ async function route(request, env, ctx) {
   return asset;
 }
 
+// Secrets piped in from a terminal often carry a trailing newline (PowerShell adds
+// CRLF), which would make every Authorization header invalid. Trim all strings once.
+const clean = (env) => Object.fromEntries(Object.entries(env).map(([k, v]) => [k, typeof v === 'string' ? v.trim() : v]));
+
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, rawEnv, ctx) {
+    const env = clean(rawEnv);
     try {
       return await route(request, env, ctx);
     } catch (e) {
@@ -67,7 +72,8 @@ export default {
 
   // Every 30 min: ask GitHub Actions to run the sync. Dispatches (unlike
   // `schedule:` triggers) are never paused for repo inactivity.
-  async scheduled(event, env, ctx) {
+  async scheduled(event, rawEnv, ctx) {
+    const env = clean(rawEnv);
     ctx.waitUntil(dispatchSync(env, { trigger: 'cron' }).catch((e) => console.error('cron dispatch failed:', e.message)));
   },
 };

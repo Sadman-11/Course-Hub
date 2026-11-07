@@ -34,7 +34,7 @@
   "vars": {
     "SITE_NAME": "Course Materials",
     "PUBLIC_URL": "https://course-hub.sadmananik.workers.dev",
-    "GOOGLE_CLIENT_ID": "REPLACE.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_ID": "874507558542-33a6b23ivfihbfuqlr34tgeq2j419dpo.apps.googleusercontent.com",
     "DRIVE_ROOT_ID": "1jTPTsKcrJIgU9ciUM1sSpYe0qig2MvZW",
     "GITHUB_REPO": "Sadman-11/Course-Materials",
     "GITHUB_WORKFLOW": "sync.yml"
