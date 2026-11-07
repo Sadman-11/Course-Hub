@@ -148,8 +148,10 @@ npm run deploy
 
 **5. Content repo**
 * Copy `content-repo/.github/workflows/sync.yml`, `content-repo/.gitattributes` and `content-repo/.syncignore` into it.
-* Add repo variables `DRIVE_ROOT_ID` (the library folder's ID) and `SYNC_API` (the Worker URL),
+* Add repo variables `DRIVE_ROOT_ID` (the library folder's ID), `SYNC_API` (the Worker URL) and `SYNC_MODE=dry`,
   and the repo secret `SYNC_TOKEN`: `gh secret set SYNC_TOKEN < .sync-token`, then delete `.sync-token`.
+* **`SYNC_MODE` is the safety switch.** Until it's `live`, every run (cron, push, "Sync now") is a dry run that only reports.
+* Pushing a workflow file needs a token with the `workflow` scope (`gh auth refresh -s workflow`).
 * The workflow checks this repo out to get the engine, so this repo should stay public. It contains code only, no secrets.
 
 **6. Connect accounts.** Open `/admin` and sign in. Then go to **Settings**:
@@ -161,7 +163,8 @@ with the account you take classes with.
 1. **Dashboard → Dry run.** On today's data it should show: 51 Drive files added to GitHub, 925 verified identical
    (152 of them get their original CRLF bytes back), 18 textbooks and 1 stray duplicate taken off GitHub,
    2 GitHub-only zips copied to Drive, and 20 Drive-only files (the textbooks plus one 135 MiB video).
-2. **Sync now.** This bootstrap links every Drive ID to its Git path. The reorganisation depends on it.
+2. **Go live** with `gh variable set SYNC_MODE -R Sadman-11/Course-Materials --body live`, then **Sync now**.
+   This bootstrap links every Drive ID to its Git path. The reorganisation depends on it.
 3. **Reorganise Drive.** Review [`reorg/PLAN.md`](reorg/PLAN.md) first.
    ```sh
    node --env-file=.env sync/index.js --list-drive=data/drive-manifest.json   # fresh listing

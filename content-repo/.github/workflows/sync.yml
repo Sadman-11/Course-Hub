@@ -27,7 +27,8 @@ on:
         default: manual
   push:
     branches: [main]
-    paths-ignore: ['.sync/**', '.github/**']
+    # Config-only pushes don't need a run; the next scheduled sync applies them.
+    paths-ignore: ['.sync/**', '.github/**', '.gitattributes', '.syncignore', 'README.md']
   schedule:
     - cron: '23 */6 * * *'
 
@@ -64,7 +65,8 @@ jobs:
           SYNC_API: ${{ vars.SYNC_API }}
           SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
           SYNC_TRIGGER: ${{ inputs.trigger || github.event_name }}
-          SYNC_DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          # Safety switch: every run is a dry run until the repo variable SYNC_MODE is "live".
+          SYNC_DRY_RUN: ${{ (inputs.dry_run == true || vars.SYNC_MODE != 'live') && 'true' || 'false' }}
           APPROVE: ${{ inputs.approve }}
         run: |
           git config --global init.defaultBranch main
